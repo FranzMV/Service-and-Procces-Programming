@@ -1,0 +1,189 @@
+{
+	"info": {
+		"_postman_id": "c43f35e0-1f03-4ca2-9351-f824b634f466",
+		"name": "Tasks",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET all tasks",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/tasks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tasks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET tasks by type",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/tasks/type/sport",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tasks",
+						"type",
+						"sport"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET tasks by priority",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/tasks/priority/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tasks",
+						"priority",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET tasks by done or not",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/tasks/done/true",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tasks",
+						"done",
+						"true"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET all  tasks of the given minimum difficulty (included), sorted in descending order",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/tasks/difficulty/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tasks",
+						"difficulty",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST add new Task",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"description\": \"Comprar leche\",\r\n    \"type\": \"home\",\r\n    \"priority\": 1,\r\n    \"done\": true,\r\n    \"difficulty\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/tasks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tasks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT update a task",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n      \"description\": \"Estudiar para examen SGE\",\r\n      \"type\": \"work\",\r\n      \"priority\": 5,\r\n      \"done\": false,\r\n      \"difficulty\": 9\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/tasks/61f84d25bcdb7127ca48b8cf",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tasks",
+						"61f84d25bcdb7127ca48b8cf"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE delete a Task",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/tasks/61f854743694d3e579b0d5b6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tasks",
+						"61f854743694d3e579b0d5b6"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

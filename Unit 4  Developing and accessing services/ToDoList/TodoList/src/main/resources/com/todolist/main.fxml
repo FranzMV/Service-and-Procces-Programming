@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.todolist.Controller">
+   <children>
+      <SplitPane dividerPositions="0.16834170854271358" layoutY="-1.0" orientation="VERTICAL" prefHeight="620.0" prefWidth="750.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="103.0" prefWidth="706.0">
+               <children>
+                  <HBox prefHeight="101.0" prefWidth="748.0" spacing="58.0">
+                     <children>
+                        <VBox prefHeight="64.0" prefWidth="139.0">
+                           <children>
+                              <Label text="Type">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox fx:id="comboShowType" onAction="#filterType" prefHeight="28.0" prefWidth="136.0" />
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="64.0" prefWidth="122.0">
+                           <children>
+                              <Label text="Priority">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox fx:id="comboShowPriority" onAction="#filterPriority" prefHeight="28.0" prefWidth="136.0" />
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="64.0" prefWidth="122.0">
+                           <children>
+                              <Label text="Done">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox fx:id="comboShowDone" onAction="#filterDone" prefHeight="28.0" prefWidth="136.0" />
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="64.0" prefWidth="152.0">
+                           <children>
+                              <Label text="Difficulty">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox fx:id="comboShowDifficulty" onAction="#filterDifficulty" prefHeight="28.0" prefWidth="136.0" />
+                           </children>
+                        </VBox>
+                     </children>
+                     <padding>
+                        <Insets left="26.0" top="20.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="444.0" prefWidth="695.0">
+               <children>
+                  <HBox layoutX="-1.0" layoutY="-2.0" prefHeight="511.0" prefWidth="748.0">
+                     <children>
+                        <ListView fx:id="listViewTasks" prefHeight="494.0" prefWidth="245.0" />
+                        <VBox prefHeight="511.0" prefWidth="504.0">
+                           <children>
+                              <HBox prefHeight="81.0" prefWidth="504.0" spacing="25.0">
+                                 <children>
+                                    <Label text="Description">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="txtDescription" prefHeight="25.0" prefWidth="226.0">
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </TextField>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                                 <padding>
+                                    <Insets left="126.0" top="35.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox prefHeight="76.0" prefWidth="504.0" spacing="40.0">
+                                 <children>
+                                    <Label text="Type">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox fx:id="comboSelectType" prefWidth="150.0">
+                                       <HBox.margin>
+                                          <Insets left="34.0" />
+                                       </HBox.margin>
+                                    </ComboBox>
+                                 </children>
+                                 <padding>
+                                    <Insets left="129.0" top="20.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox prefHeight="72.0" prefWidth="504.0" spacing="59.0">
+                                 <children>
+                                    <Label text="Priority">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox fx:id="comboSelectPriority" prefHeight="25.0" prefWidth="153.0" />
+                                 </children>
+                                 <padding>
+                                    <Insets left="125.0" top="15.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox prefHeight="74.0" prefWidth="504.0" spacing="75.0">
+                                 <children>
+                                    <Label text="Done">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox fx:id="comboSelectDone" prefHeight="25.0" prefWidth="153.0" />
+                                 </children>
+                                 <padding>
+                                    <Insets left="123.0" top="10.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox prefHeight="75.0" prefWidth="504.0" spacing="54.0">
+                                 <children>
+                                    <Label text="Difficulty">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox fx:id="comboSelectDifficulty" prefHeight="25.0" prefWidth="153.0" />
+                                 </children>
+                                 <padding>
+                                    <Insets left="118.0" top="5.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox prefHeight="133.0" prefWidth="504.0" spacing="65.0">
+                                 <children>
+                                    <Button fx:id="btnAddTask" mnemonicParsing="false" onAction="#addNewTask" prefHeight="36.0" prefWidth="92.0" text="Add" />
+                                    <Button fx:id="btnUpdateTask" mnemonicParsing="false" onAction="#updateTask" prefHeight="36.0" prefWidth="87.0" text="Update" />
+                                    <Button fx:id="btnDeleteTask" mnemonicParsing="false" onAction="#deleteTask" prefHeight="37.0" prefWidth="85.0" text="Delete" />
+                                 </children>
+                                 <padding>
+                                    <Insets left="70.0" top="50.0" />
+                                 </padding>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"m":"com.fran.bingofxclient","l":"com.fran.bingofxclient"},{"m":"com.fran.bingofxclient","l":"com.fran.bingofxclient.utils"}]

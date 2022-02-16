@@ -1,0 +1,5 @@
+module:com.todolist.todolist
+com.todolist
+com.todolist.model
+com.todolist.services
+com.todolist.utils

@@ -1,0 +1,13 @@
+#lblNum1, #lblNum2, #lblNum3, #lblNum4, #lblNum5{
+    -fx-border-radius: 50%;
+    -fx-width: 36px;
+    -fx-height: 36px;
+    -fx-padding: 8px;
+    -fx-background: #fff;
+    -fx-border: 2px;
+    -fx-border-style: solid;
+    -fx-border-color: #666;
+    -fx-color: #666;
+    -fx-text-align: center;
+}
+
